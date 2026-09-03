@@ -2,25 +2,11 @@
   <img src="./assets/terminal-header.svg" width="100%" alt="Animated JavaScript terminal returning Hello there" />
 </p>
 
-<h1 align="center"><samp>Hi there</samp></h1>
-
 <table>
   <tr>
     <td width="62%" valign="top">
       <h2><samp>About me</samp></h2>
-      <p><samp>
-        I'm a <strong>frontend developer</strong> focused on React and modern web applications,
-        and a fourth-year student at <strong>BSU, Faculty of Applied Mathematics and Computer Science</strong>.
-      </samp></p>
-      <p><samp>
-        I enjoy turning ideas into fast, accessible and maintainable products. I'm also passionate
-        about <strong>machine learning</strong> and curious about the places where intelligent systems
-        meet great user experience.
-      </samp></p>
-      <p><samp>
-        For me, coding is more than shipping features: it's a way to explore new technology,
-        simplify complex things and build tools people genuinely enjoy using.
-      </samp></p>
+      <img src="./assets/about.svg" width="100%" alt="About me: frontend developer, BSU student and machine learning enthusiast" />
     </td>
     <td width="38%" valign="top">
       <h2><samp>Contact me</samp></h2>
@@ -43,13 +29,13 @@
   </tr>
 </table>
 
-<h2 align="center"><samp>GitHub activity</samp></h2>
+<h3 align="center"><samp>GitHub activity</samp></h3>
 
 <p align="center">
   <img src="./assets/activity.svg" width="100%" alt="GitHub contributions, longest streak and activity radar" />
 </p>
 
-<h2 align="center"><samp>Technology constellation</samp></h2>
+<h3 align="center"><samp>Technology constellation</samp></h3>
 
 <table>
   <tr>
@@ -75,9 +61,10 @@
         <img src="https://img.shields.io/badge/Python-111827?style=flat-square&logo=python&logoColor=3776AB" alt="Python" />
         <img src="https://img.shields.io/badge/Qt-111827?style=flat-square&logo=qt&logoColor=41CD52" alt="Qt" />
         <img src="https://img.shields.io/badge/Git-111827?style=flat-square&logo=git&logoColor=F05032" alt="Git" />
-      </p>
-      <h3><samp>AI-assisted workflow</samp></h3>
-      <p>
+        <img src="https://img.shields.io/badge/Assembly-111827?style=flat-square&logo=assemblyscript&logoColor=007AAC" alt="Assembly" />
+        <img src="https://img.shields.io/badge/OpenGL-111827?style=flat-square&logo=opengl&logoColor=5586A4" alt="OpenGL" />
+        <img src="https://img.shields.io/badge/PyTorch-111827?style=flat-square&logo=pytorch&logoColor=EE4C2C" alt="PyTorch" />
+        <img src="https://img.shields.io/badge/GitHub_Copilot-111827?style=flat-square&logo=githubcopilot&logoColor=FFFFFF" alt="GitHub Copilot" />
         <img src="https://img.shields.io/badge/Claude_Code-111827?style=flat-square&logo=claude&logoColor=D97757" alt="Claude Code" />
         <img src="https://img.shields.io/badge/Codex-111827?style=flat-square&logo=openai&logoColor=FFFFFF" alt="OpenAI Codex" />
       </p>

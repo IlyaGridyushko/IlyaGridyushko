@@ -1,20 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="230" viewBox="0 0 1000 230" role="img" aria-labelledby="title desc">
   <title id="title">Animated JavaScript terminal</title>
-  <desc id="desc">JavaScript is typed rapidly with a moving editor caret and returns a Hello there message.</desc>
+  <desc id="desc">JavaScript is typed with a moving caret, the return value flickers into view, then the code dissolves into binary.</desc>
   <defs>
     <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#080f1d"/><stop offset="1" stop-color="#0b1628"/></linearGradient>
-    <clipPath id="l1"><rect x="0" y="0" width="0" height="22"><animate attributeName="width" values="0;0;348;348" keyTimes="0;.02;.18;1" dur="4s" repeatCount="indefinite"/></rect></clipPath>
-    <clipPath id="l2"><rect x="0" y="24" width="0" height="22"><animate attributeName="width" values="0;0;174;174" keyTimes="0;.18;.31;1" dur="4s" repeatCount="indefinite"/></rect></clipPath>
-    <clipPath id="l3"><rect x="0" y="48" width="0" height="22"><animate attributeName="width" values="0;0;388;388" keyTimes="0;.31;.48;1" dur="4s" repeatCount="indefinite"/></rect></clipPath>
-    <clipPath id="l4"><rect x="0" y="72" width="0" height="22"><animate attributeName="width" values="0;0;520;520" keyTimes="0;.48;.68;1" dur="4s" repeatCount="indefinite"/></rect></clipPath>
-    <clipPath id="l5"><rect x="0" y="96" width="0" height="22"><animate attributeName="width" values="0;0;58;58" keyTimes="0;.68;.74;1" dur="4s" repeatCount="indefinite"/></rect></clipPath>
-    <clipPath id="l6"><rect x="0" y="120" width="0" height="22"><animate attributeName="width" values="0;0;486;486" keyTimes="0;.74;.92;1" dur="4s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="l1"><rect x="0" y="0" width="0" height="22"><animate attributeName="width" values="0;0;348;348" keyTimes="0;.01;.055;1" dur="8s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="l2"><rect x="0" y="24" width="0" height="22"><animate attributeName="width" values="0;0;174;174" keyTimes="0;.055;.095;1" dur="8s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="l3"><rect x="0" y="48" width="0" height="22"><animate attributeName="width" values="0;0;388;388" keyTimes="0;.095;.145;1" dur="8s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="l4"><rect x="0" y="72" width="0" height="22"><animate attributeName="width" values="0;0;520;520" keyTimes="0;.145;.21;1" dur="8s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="l5"><rect x="0" y="96" width="0" height="22"><animate attributeName="width" values="0;0;58;58" keyTimes="0;.21;.225;1" dur="8s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="l6"><rect x="0" y="120" width="0" height="22"><animate attributeName="width" values="0;0;486;486" keyTimes="0;.225;.28;1" dur="8s" repeatCount="indefinite"/></rect></clipPath>
     <style>
-      .mono { font-family: "Ubuntu Mono", "Cascadia Code", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .mono { font-family:"Ubuntu Mono","Cascadia Code","JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
       .code { font-size:16px; font-weight:500; }
-      .caret { fill:#60a5fa; }
+      .caret { fill:#60a5fa; animation:cursorBlink .9s steps(1,end) infinite; }
+      .bit { font-size:13px; font-weight:700; fill:#60a5fa; }
+      .bit-dim { fill:#29476d; }
+      @keyframes cursorBlink { 0%,79%,93%,100% { opacity:1 } 80%,92% { opacity:0 } }
     </style>
   </defs>
+
   <rect x="1" y="1" width="998" height="228" rx="15" fill="url(#surface)" stroke="#2563eb" stroke-width="2"/>
   <path d="M1 44H999" stroke="#1e3a5f"/>
   <circle cx="24" cy="22" r="4" fill="#3b82f6"/>
@@ -22,46 +26,46 @@
   <circle cx="56" cy="22" r="4" fill="#29476d"/>
   <text x="500" y="28" text-anchor="middle" class="mono" font-size="13" fill="#7187a6">hello.js — javascript</text>
   <text x="958" y="28" text-anchor="end" class="mono" font-size="12" fill="#4f6b91">UTF-8 · LF</text>
-  <g transform="translate(54 63)" class="mono code">
-    <text y="16" clip-path="url(#l1)"><tspan fill="#60a5fa">const</tspan><tspan fill="#d8e3f0"> greet = ({ name, role }) </tspan><tspan fill="#93c5fd">=&gt;</tspan></text>
-    <text y="40" clip-path="url(#l2)"><tspan fill="#d8e3f0">  Object.</tspan><tspan fill="#7dd3fc">freeze</tspan><tspan fill="#d8e3f0">({</tspan></text>
-    <text y="64" clip-path="url(#l3)"><tspan fill="#d8e3f0">    message: </tspan><tspan fill="#bfdbfe">`Hello there, ${name}.`</tspan><tspan fill="#d8e3f0">,</tspan></text>
-    <text y="88" clip-path="url(#l4)"><tspan fill="#d8e3f0">    ship: (stack) </tspan><tspan fill="#93c5fd">=&gt;</tspan><tspan fill="#d8e3f0"> stack.map(tech </tspan><tspan fill="#93c5fd">=&gt;</tspan><tspan fill="#bfdbfe"> `${tech}: ready`</tspan><tspan fill="#d8e3f0">),</tspan></text>
-    <text y="112" clip-path="url(#l5)" fill="#d8e3f0">  });</text>
-    <text y="136" clip-path="url(#l6)"><tspan fill="#7dd3fc">greet</tspan><tspan fill="#d8e3f0">({ name: </tspan><tspan fill="#bfdbfe">"World"</tspan><tspan fill="#d8e3f0">, role: </tspan><tspan fill="#bfdbfe">"frontend"</tspan><tspan fill="#d8e3f0"> });</tspan></text>
-    <g>
-      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.02;.18;.181;1" dur="4s" repeatCount="indefinite"/>
-      <rect class="caret" x="0" y="0" width="2" height="19"><animate attributeName="x" values="0;0;348;348" keyTimes="0;.02;.18;1" dur="4s" repeatCount="indefinite"/></rect>
+
+  <g>
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.91;.975;1" dur="8s" repeatCount="indefinite"/>
+    <g transform="translate(54 63)" class="mono code">
+      <text y="16" clip-path="url(#l1)"><tspan fill="#60a5fa">const</tspan><tspan fill="#d8e3f0"> greet = ({ name, role }) </tspan><tspan fill="#93c5fd">=&gt;</tspan></text>
+      <text y="40" clip-path="url(#l2)"><tspan fill="#d8e3f0">  Object.</tspan><tspan fill="#7dd3fc">freeze</tspan><tspan fill="#d8e3f0">({</tspan></text>
+      <text y="64" clip-path="url(#l3)"><tspan fill="#d8e3f0">    message: </tspan><tspan fill="#bfdbfe">`Hello there, ${name}.`</tspan><tspan fill="#d8e3f0">,</tspan></text>
+      <text y="88" clip-path="url(#l4)"><tspan fill="#d8e3f0">    ship: (stack) </tspan><tspan fill="#93c5fd">=&gt;</tspan><tspan fill="#d8e3f0"> stack.map(tech </tspan><tspan fill="#93c5fd">=&gt;</tspan><tspan fill="#bfdbfe"> `${tech}: ready`</tspan><tspan fill="#d8e3f0">),</tspan></text>
+      <text y="112" clip-path="url(#l5)" fill="#d8e3f0">  });</text>
+      <text y="136" clip-path="url(#l6)"><tspan fill="#7dd3fc">greet</tspan><tspan fill="#d8e3f0">({ name: </tspan><tspan fill="#bfdbfe">"World"</tspan><tspan fill="#d8e3f0">, role: </tspan><tspan fill="#bfdbfe">"frontend"</tspan><tspan fill="#d8e3f0"> });</tspan></text>
+
+      <g><animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.01;.055;.056;1" dur="8s" repeatCount="indefinite"/><rect class="caret" y="0" width="2" height="19"><animate attributeName="x" values="0;0;348;348" keyTimes="0;.01;.055;1" dur="8s" repeatCount="indefinite"/></rect></g>
+      <g><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.054;.055;.095;.096;1" dur="8s" repeatCount="indefinite"/><rect class="caret" y="24" width="2" height="19"><animate attributeName="x" values="0;0;174;174" keyTimes="0;.055;.095;1" dur="8s" repeatCount="indefinite"/></rect></g>
+      <g><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.094;.095;.145;.146;1" dur="8s" repeatCount="indefinite"/><rect class="caret" y="48" width="2" height="19"><animate attributeName="x" values="0;0;388;388" keyTimes="0;.095;.145;1" dur="8s" repeatCount="indefinite"/></rect></g>
+      <g><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.144;.145;.21;.211;1" dur="8s" repeatCount="indefinite"/><rect class="caret" y="72" width="2" height="19"><animate attributeName="x" values="0;0;520;520" keyTimes="0;.145;.21;1" dur="8s" repeatCount="indefinite"/></rect></g>
+      <g><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.209;.21;.225;.226;1" dur="8s" repeatCount="indefinite"/><rect class="caret" y="96" width="2" height="19"><animate attributeName="x" values="0;0;58;58" keyTimes="0;.21;.225;1" dur="8s" repeatCount="indefinite"/></rect></g>
+      <g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.224;.225;.91;1" dur="8s" repeatCount="indefinite"/><rect class="caret" y="120" width="2" height="19"><animate attributeName="x" values="0;0;486;486" keyTimes="0;.225;.28;1" dur="8s" repeatCount="indefinite"/></rect></g>
     </g>
-    <g>
-      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.179;.18;.31;.311;1" dur="4s" repeatCount="indefinite"/>
-      <rect class="caret" x="0" y="24" width="2" height="19"><animate attributeName="x" values="0;0;174;174" keyTimes="0;.18;.31;1" dur="4s" repeatCount="indefinite"/></rect>
-    </g>
-    <g>
-      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.309;.31;.48;.481;1" dur="4s" repeatCount="indefinite"/>
-      <rect class="caret" x="0" y="48" width="2" height="19"><animate attributeName="x" values="0;0;388;388" keyTimes="0;.31;.48;1" dur="4s" repeatCount="indefinite"/></rect>
-    </g>
-    <g>
-      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.479;.48;.68;.681;1" dur="4s" repeatCount="indefinite"/>
-      <rect class="caret" x="0" y="72" width="2" height="19"><animate attributeName="x" values="0;0;520;520" keyTimes="0;.48;.68;1" dur="4s" repeatCount="indefinite"/></rect>
-    </g>
-    <g>
-      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.679;.68;.74;.741;1" dur="4s" repeatCount="indefinite"/>
-      <rect class="caret" x="0" y="96" width="2" height="19"><animate attributeName="x" values="0;0;58;58" keyTimes="0;.68;.74;1" dur="4s" repeatCount="indefinite"/></rect>
-    </g>
-    <g>
-      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.739;.74;.92;1" dur="4s" repeatCount="indefinite"/>
-      <rect class="caret" x="0" y="120" width="2" height="19"><animate attributeName="x" values="0;0;486;486" keyTimes="0;.74;.92;1" dur="4s" repeatCount="indefinite"/></rect>
+
+    <g class="mono" transform="translate(700 78)">
+      <path d="M0 0V104" stroke="#1e3a5f"/>
+      <text x="28" y="3" font-size="12" fill="#4f6b91">RETURN VALUE</text>
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;0;1;0;1;0;1;0;1;1;0;0" keyTimes="0;.28;.30;.32;.34;.355;.368;.378;.386;.393;.40;.91;.975;1" dur="8s" repeatCount="indefinite"/>
+        <text x="28" y="37" font-size="15" fill="#d8e3f0">{ message:</text>
+        <text x="28" y="63" font-size="18" font-weight="700" fill="#60a5fa">"Hello there, World."</text>
+        <text x="28" y="89" font-size="15" fill="#d8e3f0">}</text>
+      </g>
     </g>
   </g>
-  <g class="mono" transform="translate(700 78)">
-    <path d="M0 0V104" stroke="#1e3a5f"/>
-    <text x="28" y="3" font-size="12" fill="#4f6b91">RETURN VALUE</text>
-    <g opacity="0">
-      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;.91;.94;1" dur="4s" repeatCount="indefinite"/>
-      <text x="28" y="37" font-size="15" fill="#d8e3f0">{ message:</text>
-      <text x="28" y="63" font-size="18" font-weight="700" fill="#60a5fa">"Hello there, World."</text>
-      <text x="28" y="89" font-size="15" fill="#d8e3f0">}</text>
-    </g>
+
+  <g class="mono" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;.91;.93;.975;1" dur="8s" repeatCount="indefinite"/>
+    <g><text class="bit" x="82" y="83">0 1 1 0</text><animateTransform attributeName="transform" type="translate" values="0 0;0 0;-34 -24;-48 -38" keyTimes="0;.91;.975;1" dur="8s" repeatCount="indefinite"/></g>
+    <g><text class="bit bit-dim" x="188" y="107">1 0 0 1 0</text><animateTransform attributeName="transform" type="translate" values="0 0;0 0;12 -34;18 -48" keyTimes="0;.91;.975;1" dur="8s" repeatCount="indefinite"/></g>
+    <g><text class="bit" x="314" y="131">0 1 0</text><animateTransform attributeName="transform" type="translate" values="0 0;0 0;-18 35;-26 48" keyTimes="0;.91;.975;1" dur="8s" repeatCount="indefinite"/></g>
+    <g><text class="bit bit-dim" x="446" y="155">1 1 0 1</text><animateTransform attributeName="transform" type="translate" values="0 0;0 0;30 28;44 42" keyTimes="0;.91;.975;1" dur="8s" repeatCount="indefinite"/></g>
+    <g><text class="bit" x="570" y="179">0 0 1</text><animateTransform attributeName="transform" type="translate" values="0 0;0 0;-8 31;-14 46" keyTimes="0;.91;.975;1" dur="8s" repeatCount="indefinite"/></g>
+    <g><text class="bit bit-dim" x="746" y="111">1 0 1 1</text><animateTransform attributeName="transform" type="translate" values="0 0;0 0;-26 -32;-40 -46" keyTimes="0;.91;.975;1" dur="8s" repeatCount="indefinite"/></g>
+    <g><text class="bit" x="842" y="137">0 1 0</text><animateTransform attributeName="transform" type="translate" values="0 0;0 0;34 -18;52 -28" keyTimes="0;.91;.975;1" dur="8s" repeatCount="indefinite"/></g>
+    <g><text class="bit bit-dim" x="779" y="167">1 1 0 0 1</text><animateTransform attributeName="transform" type="translate" values="0 0;0 0;10 32;16 48" keyTimes="0;.91;.975;1" dur="8s" repeatCount="indefinite"/></g>
   </g>
 </svg>

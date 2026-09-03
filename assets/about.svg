@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="276" viewBox="0 0 600 276" role="img" aria-labelledby="title desc">
+  <title id="title">About me</title>
+  <desc id="desc">A short introduction from a frontend developer, BSU student and machine learning enthusiast.</desc>
+  <style>
+    text { font-family:"Ubuntu Mono","Cascadia Code","JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:17px; }
+    .body { fill:#24292f; }
+    .accent { fill:#2563eb; font-weight:700; }
+    @media (prefers-color-scheme:dark) {
+      .body { fill:#c9d1d9; }
+      .accent { fill:#60a5fa; }
+    }
+  </style>
+  <g class="body">
+    <text x="4" y="22">I'm a <tspan class="accent">frontend developer</tspan> focused on React and modern</text>
+    <text x="4" y="46">web applications, and a fourth-year student at BSU,</text>
+    <text x="4" y="70">Faculty of Applied Mathematics and Computer Science.</text>
+
+    <text x="4" y="116">I enjoy turning ideas into fast, accessible and maintainable</text>
+    <text x="4" y="140">products. I'm also passionate about <tspan class="accent">machine learning</tspan> and</text>
+    <text x="4" y="164">curious about where intelligent systems meet great UX.</text>
+
+    <text x="4" y="210">I love coding and digging into complex things: understanding</text>
+    <text x="4" y="234">how they work, untangling edge cases and staying with a</text>
+    <text x="4" y="258">problem until the solution feels clear and solid.</text>
+  </g>
+</svg>
