@@ -97,7 +97,7 @@ const pointsFor = (values, maxValue, cx, cy, radius) => values.map((value, index
 
 const compact = (value) => new Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 }).format(value);
 
-const render = ({ login, total, streak, year, metrics, pending = false }) => {
+const render = ({ login, total, streak, metrics, pending = false }) => {
   const labels = ["Commits", "Issues", "Pull requests", "Reviews", "Repositories"];
   const values = [metrics.commits, metrics.issues, metrics.pullRequests, metrics.reviews, metrics.repositories];
   const cx = 750;
@@ -137,7 +137,7 @@ const render = ({ login, total, streak, year, metrics, pending = false }) => {
   </defs>
   <rect x="1" y="1" width="998" height="262" rx="15" fill="#080f1d" stroke="#2563eb" stroke-width="2"/>
   <text x="32" y="35" class="eyebrow">GITHUB ACTIVITY · ${escapeXml(login)}</text>
-  <text x="32" y="58" class="label">all-time progress / ${year} contribution mix</text>
+  <text x="32" y="58" class="label">all-time progress / all-time contribution mix</text>
   <line x1="480" y1="24" x2="480" y2="238" stroke="#1e3a5f"/>
 
   <rect x="32" y="80" width="198" height="100" rx="10" fill="#0b1628" stroke="#1e3a5f"/>
@@ -170,7 +170,6 @@ if (placeholderMode) {
     login: "YOUR_USERNAME",
     total: 0,
     streak: 0,
-    year: new Date().getUTCFullYear(),
     metrics: { commits: 0, issues: 0, pullRequests: 0, reviews: 0, repositories: 0 },
     pending: true,
   };
@@ -178,7 +177,6 @@ if (placeholderMode) {
   const profile = await query(profileQuery, { login: username });
   if (!profile.user) throw new Error(`GitHub user '${username}' was not found.`);
 
-  const currentYear = new Date().getUTCFullYear();
   const years = [...new Set(profile.user.contributionsCollection.contributionYears)].sort((a, b) => a - b);
   const yearly = [];
 
@@ -187,19 +185,18 @@ if (placeholderMode) {
     yearly.push({ year, ...data.user.contributionsCollection });
   }
 
-  const current = yearly.find(({ year }) => year === currentYear) ?? yearly.at(-1);
   const days = yearly.flatMap(({ contributionCalendar }) => contributionCalendar.weeks.flatMap(({ contributionDays }) => contributionDays));
+  const sumMetric = (field) => yearly.reduce((sum, item) => sum + item[field], 0);
   stats = {
     login: username,
     total: yearly.reduce((sum, item) => sum + item.contributionCalendar.totalContributions, 0),
     streak: longestStreak(days),
-    year: currentYear,
     metrics: {
-      commits: current.totalCommitContributions,
-      issues: current.totalIssueContributions,
-      pullRequests: current.totalPullRequestContributions,
-      reviews: current.totalPullRequestReviewContributions,
-      repositories: current.totalRepositoryContributions,
+      commits: sumMetric("totalCommitContributions"),
+      issues: sumMetric("totalIssueContributions"),
+      pullRequests: sumMetric("totalPullRequestContributions"),
+      reviews: sumMetric("totalPullRequestReviewContributions"),
+      repositories: sumMetric("totalRepositoryContributions"),
     },
   };
 }

@@ -16,7 +16,7 @@
   </defs>
   <rect x="1" y="1" width="998" height="262" rx="15" fill="#080f1d" stroke="#2563eb" stroke-width="2"/>
   <text x="32" y="35" class="eyebrow">GITHUB ACTIVITY · YOUR_USERNAME</text>
-  <text x="32" y="58" class="label">all-time progress / 2026 contribution mix</text>
+  <text x="32" y="58" class="label">all-time progress / all-time contribution mix</text>
   <line x1="480" y1="24" x2="480" y2="238" stroke="#1e3a5f"/>
 
   <rect x="32" y="80" width="198" height="100" rx="10" fill="#0b1628" stroke="#1e3a5f"/>
