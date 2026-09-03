@@ -1,34 +1,30 @@
 <p align="center">
-  <img src="./assets/terminal-header.svg" width="100%" alt="Animated terminal saying Hello, World!" />
+  <img src="./assets/terminal-header.svg" width="100%" alt="Animated JavaScript terminal returning Hello there" />
 </p>
 
-<h1 align="center">Hi there, I'm a frontend developer 👋</h1>
-
-<p align="center">
-  <em>Building thoughtful interfaces where clean code meets useful ideas.</em>
-</p>
+<h1 align="center"><samp>Hi there</samp></h1>
 
 <table>
   <tr>
     <td width="62%" valign="top">
-      <h2>About me</h2>
-      <p>
+      <h2><samp>About me</samp></h2>
+      <p><samp>
         I'm a <strong>frontend developer</strong> focused on React and modern web applications,
         and a fourth-year student at <strong>BSU, Faculty of Applied Mathematics and Computer Science</strong>.
-      </p>
-      <p>
+      </samp></p>
+      <p><samp>
         I enjoy turning ideas into fast, accessible and maintainable products. I'm also passionate
         about <strong>machine learning</strong> and curious about the places where intelligent systems
         meet great user experience.
-      </p>
-      <p>
+      </samp></p>
+      <p><samp>
         For me, coding is more than shipping features: it's a way to explore new technology,
         simplify complex things and build tools people genuinely enjoy using.
-      </p>
+      </samp></p>
     </td>
     <td width="38%" valign="top">
-      <h2>Contact me</h2>
-      <p>Have an idea, a project, or just want to say hello? My inbox is open.</p>
+      <h2><samp>Contact me</samp></h2>
+      <p><samp>Have an idea, a project, or just want to say hello? My inbox is open.</samp></p>
       <p>
         <a href="mailto:gridilya2@gmail.com">
           <img src="https://img.shields.io/badge/Email-111827?style=for-the-badge&logo=gmail&logoColor=EA4335" alt="Email" />
@@ -47,18 +43,18 @@
   </tr>
 </table>
 
-<h2 align="center">GitHub activity</h2>
+<h2 align="center"><samp>GitHub activity</samp></h2>
 
 <p align="center">
   <img src="./assets/activity.svg" width="100%" alt="GitHub contributions, longest streak and activity radar" />
 </p>
 
-<h2 align="center">Technology constellation</h2>
+<h2 align="center"><samp>Technology constellation</samp></h2>
 
 <table>
   <tr>
     <td width="50%" align="center" valign="top">
-      <h3>Frontend</h3>
+      <h3><samp>Frontend</samp></h3>
       <p>
         <img src="https://img.shields.io/badge/JavaScript-111827?style=flat-square&logo=javascript&logoColor=F7DF1E" alt="JavaScript" />
         <img src="https://img.shields.io/badge/TypeScript-111827?style=flat-square&logo=typescript&logoColor=3178C6" alt="TypeScript" />
@@ -73,14 +69,14 @@
       </p>
     </td>
     <td width="50%" align="center" valign="top">
-      <h3>Beyond the browser</h3>
+      <h3><samp>Beyond the browser</samp></h3>
       <p>
         <img src="https://img.shields.io/badge/C%2B%2B-111827?style=flat-square&logo=cplusplus&logoColor=00599C" alt="C++" />
         <img src="https://img.shields.io/badge/Python-111827?style=flat-square&logo=python&logoColor=3776AB" alt="Python" />
         <img src="https://img.shields.io/badge/Qt-111827?style=flat-square&logo=qt&logoColor=41CD52" alt="Qt" />
         <img src="https://img.shields.io/badge/Git-111827?style=flat-square&logo=git&logoColor=F05032" alt="Git" />
       </p>
-      <h3>AI-assisted workflow</h3>
+      <h3><samp>AI-assisted workflow</samp></h3>
       <p>
         <img src="https://img.shields.io/badge/Claude_Code-111827?style=flat-square&logo=claude&logoColor=D97757" alt="Claude Code" />
         <img src="https://img.shields.io/badge/Codex-111827?style=flat-square&logo=openai&logoColor=FFFFFF" alt="OpenAI Codex" />
@@ -90,5 +86,5 @@
 </table>
 
 <p align="center">
-  <sub>Always learning · always building · open to collaboration</sub>
+  <samp><sub>Always learning · always building · open to collaboration</sub></samp>
 </p>

@@ -100,9 +100,9 @@ const compact = (value) => new Intl.NumberFormat("en", { notation: "compact", ma
 const render = ({ login, total, streak, year, metrics, pending = false }) => {
   const labels = ["Commits", "Issues", "Pull requests", "Reviews", "Repositories"];
   const values = [metrics.commits, metrics.issues, metrics.pullRequests, metrics.reviews, metrics.repositories];
-  const cx = 760;
-  const cy = 208;
-  const radius = 135;
+  const cx = 750;
+  const cy = 128;
+  const radius = 78;
   const maxMetric = Math.max(...values, 10);
   const maxRing = 10 ** Math.ceil(Math.log10(maxMetric));
   const grid = [0.25, 0.5, 0.75, 1].map((ratio) =>
@@ -113,54 +113,53 @@ const render = ({ login, total, streak, year, metrics, pending = false }) => {
     return `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" />`;
   }).join("");
   const labelNodes = labels.map((label, i) => {
-    const [x, y] = point(cx, cy, radius + 38, i);
-    const anchor = x < cx - 20 ? "end" : x > cx + 20 ? "start" : "middle";
-    const dy = i === 0 ? -2 : 5;
-    return `<text x="${x.toFixed(1)}" y="${(y + dy).toFixed(1)}" text-anchor="${anchor}" class="radar-label">${label}<tspan x="${x.toFixed(1)}" dy="18" class="radar-value">${compact(values[i])}</tspan></text>`;
+    const [x, y] = point(cx, cy, radius + 28, i);
+    const anchor = x < cx - 16 ? "end" : x > cx + 16 ? "start" : "middle";
+    const dy = i === 0 ? 0 : 3;
+    return `<text x="${x.toFixed(1)}" y="${(y + dy).toFixed(1)}" text-anchor="${anchor}" class="radar-label">${label}<tspan x="${x.toFixed(1)}" dy="14" class="radar-value">${compact(values[i])}</tspan></text>`;
   }).join("");
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="440" viewBox="0 0 1000 440" role="img" aria-labelledby="title desc">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="264" viewBox="0 0 1000 264" role="img" aria-labelledby="title desc">
   <title id="title">GitHub activity for ${escapeXml(login)}</title>
   <desc id="desc">${total} total contributions, ${streak} day longest streak, and a radar chart of contribution types.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a0f1f"/><stop offset="1" stop-color="#17112a"/></linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#22d3ee"/><stop offset=".52" stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899"/></linearGradient>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <style>
-      text { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-      .eyebrow { fill:#8b96ad; font-size:14px; letter-spacing:2px; text-transform:uppercase; }
-      .big { fill:#f8fafc; font-size:42px; font-weight:750; }
-      .label { fill:#9aa7bd; font-size:15px; }
-      .radar-label { fill:#cbd5e1; font-size:14px; font-weight:600; }
-      .radar-value { fill:#67e8f9; font-size:12px; font-weight:500; }
-      .grid polygon, .grid line { fill:none; stroke:#526078; stroke-width:1; opacity:.48; }
-      .shape { transform-box:fill-box; transform-origin:center; animation:grow 1s cubic-bezier(.2,.8,.2,1) both; }
-      @keyframes grow { from { transform:scale(.05); opacity:0 } to { transform:scale(1); opacity:1 } }
+      text { font-family:"Ubuntu Mono","Cascadia Code","JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+      .eyebrow { fill:#60a5fa; font-size:13px; font-weight:700; letter-spacing:1.4px; }
+      .big { fill:#eff6ff; font-size:32px; font-weight:700; }
+      .label { fill:#7890b0; font-size:13px; }
+      .radar-label { fill:#c7d7eb; font-size:12px; font-weight:600; }
+      .radar-value { fill:#60a5fa; font-size:11px; font-weight:500; }
+      .grid polygon, .grid line { fill:none; stroke:#29476d; stroke-width:1; opacity:.7; }
+      .shape { transform-box:fill-box; transform-origin:center; animation:grow .55s ease-out both; }
+      @keyframes grow { from { transform:scale(.1); opacity:0 } to { transform:scale(1); opacity:1 } }
     </style>
   </defs>
-  <rect x="1" y="1" width="998" height="438" rx="24" fill="url(#bg)" stroke="#27334a" stroke-width="2"/>
-  <rect x="34" y="32" width="932" height="3" rx="1.5" fill="url(#accent)"/>
-  <text x="54" y="75" class="eyebrow">GITHUB · ${escapeXml(login)}</text>
-  <text x="54" y="122" fill="#f8fafc" font-size="25" font-weight="700">Activity snapshot</text>
-  <text x="54" y="151" class="label">All-time progress + ${year} contribution mix</text>
-  <line x1="490" y1="70" x2="490" y2="370" stroke="#27334a"/>
+  <rect x="1" y="1" width="998" height="262" rx="15" fill="#080f1d" stroke="#2563eb" stroke-width="2"/>
+  <text x="32" y="35" class="eyebrow">GITHUB ACTIVITY · ${escapeXml(login)}</text>
+  <text x="32" y="58" class="label">all-time progress / ${year} contribution mix</text>
+  <line x1="480" y1="24" x2="480" y2="238" stroke="#1e3a5f"/>
 
-  <text x="54" y="219" class="big">${total.toLocaleString("en-US")}</text>
-  <text x="54" y="246" class="label">total contributions</text>
-  <text x="283" y="219" class="big">${streak}</text>
-  <text x="283" y="246" class="label">day longest streak</text>
+  <rect x="32" y="80" width="198" height="100" rx="10" fill="#0b1628" stroke="#1e3a5f"/>
+  <text x="50" y="124" class="big">${total.toLocaleString("en-US")}</text>
+  <text x="50" y="150" class="label">total contributions</text>
+  <path d="M50 164H212" stroke="#1e3a5f"/>
+  <text x="50" y="174" class="eyebrow" font-size="10">ALL TIME</text>
 
-  <rect x="54" y="286" width="382" height="70" rx="14" fill="#111a2c" stroke="#27334a"/>
-  <circle cx="82" cy="321" r="7" fill="#67e8f9" filter="url(#glow)"/>
-  <text x="103" y="316" fill="#dbeafe" font-size="15" font-weight="600">Contribution radar</text>
-  <text x="103" y="339" class="label">Log scale up to ${compact(maxRing)} · updated automatically</text>
+  <rect x="246" y="80" width="198" height="100" rx="10" fill="#0b1628" stroke="#1e3a5f"/>
+  <text x="264" y="124" class="big">${streak}</text>
+  <text x="264" y="150" class="label">day longest streak</text>
+  <path d="M264 164H426" stroke="#1e3a5f"/>
+  <text x="264" y="174" class="eyebrow" font-size="10">BEST RUN</text>
+
+  <circle cx="39" cy="215" r="4" fill="#3b82f6"/>
+  <text x="52" y="219" class="label">radar uses a log scale up to ${compact(maxRing)}</text>
 
   <g class="grid">${grid}${axes}</g>
-  <polygon class="shape" points="${pointsFor(values, maxRing, cx, cy, radius)}" fill="url(#accent)" fill-opacity=".38" stroke="#67e8f9" stroke-width="2.5" filter="url(#glow)"/>
+  <polygon class="shape" points="${pointsFor(values, maxRing, cx, cy, radius)}" fill="#2563eb" fill-opacity=".28" stroke="#60a5fa" stroke-width="2"/>
   ${labelNodes}
-  ${pending ? '<rect x="545" y="178" width="430" height="62" rx="14" fill="#0a0f1f" fill-opacity=".92" stroke="#8b5cf6"/><text x="760" y="205" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="650">Live data will appear after the first workflow run</text><text x="760" y="226" text-anchor="middle" class="label">Actions → Update profile activity → Run workflow</text>' : ""}
-  <text x="54" y="404" class="label">Data source: GitHub GraphQL API</text>
-  <text x="946" y="404" text-anchor="end" class="label">generated ${new Date().toISOString().slice(0, 10)}</text>
+  ${pending ? '<rect x="548" y="99" width="404" height="54" rx="9" fill="#080f1d" fill-opacity=".96" stroke="#2563eb"/><text x="750" y="122" text-anchor="middle" fill="#dbeafe" font-size="13" font-weight="700">Waiting for the first workflow run</text><text x="750" y="141" text-anchor="middle" class="label">Actions → Update profile activity</text>' : ""}
+  <text x="968" y="246" text-anchor="end" class="label">GitHub GraphQL · ${new Date().toISOString().slice(0, 10)}</text>
 </svg>`;
 };
 
@@ -208,4 +207,3 @@ if (placeholderMode) {
 await mkdir(dirname(outputPath), { recursive: true });
 await writeFile(outputPath, render(stats), "utf8");
 console.log(`Updated ${outputPath}`);
-

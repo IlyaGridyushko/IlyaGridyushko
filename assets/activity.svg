@@ -1,43 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="440" viewBox="0 0 1000 440" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="264" viewBox="0 0 1000 264" role="img" aria-labelledby="title desc">
   <title id="title">GitHub activity for YOUR_USERNAME</title>
   <desc id="desc">0 total contributions, 0 day longest streak, and a radar chart of contribution types.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a0f1f"/><stop offset="1" stop-color="#17112a"/></linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#22d3ee"/><stop offset=".52" stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899"/></linearGradient>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <style>
-      text { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-      .eyebrow { fill:#8b96ad; font-size:14px; letter-spacing:2px; text-transform:uppercase; }
-      .big { fill:#f8fafc; font-size:42px; font-weight:750; }
-      .label { fill:#9aa7bd; font-size:15px; }
-      .radar-label { fill:#cbd5e1; font-size:14px; font-weight:600; }
-      .radar-value { fill:#67e8f9; font-size:12px; font-weight:500; }
-      .grid polygon, .grid line { fill:none; stroke:#526078; stroke-width:1; opacity:.48; }
-      .shape { transform-box:fill-box; transform-origin:center; animation:grow 1s cubic-bezier(.2,.8,.2,1) both; }
-      @keyframes grow { from { transform:scale(.05); opacity:0 } to { transform:scale(1); opacity:1 } }
+      text { font-family:"Ubuntu Mono","Cascadia Code","JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+      .eyebrow { fill:#60a5fa; font-size:13px; font-weight:700; letter-spacing:1.4px; }
+      .big { fill:#eff6ff; font-size:32px; font-weight:700; }
+      .label { fill:#7890b0; font-size:13px; }
+      .radar-label { fill:#c7d7eb; font-size:12px; font-weight:600; }
+      .radar-value { fill:#60a5fa; font-size:11px; font-weight:500; }
+      .grid polygon, .grid line { fill:none; stroke:#29476d; stroke-width:1; opacity:.7; }
+      .shape { transform-box:fill-box; transform-origin:center; animation:grow .55s ease-out both; }
+      @keyframes grow { from { transform:scale(.1); opacity:0 } to { transform:scale(1); opacity:1 } }
     </style>
   </defs>
-  <rect x="1" y="1" width="998" height="438" rx="24" fill="url(#bg)" stroke="#27334a" stroke-width="2"/>
-  <rect x="34" y="32" width="932" height="3" rx="1.5" fill="url(#accent)"/>
-  <text x="54" y="75" class="eyebrow">GITHUB · YOUR_USERNAME</text>
-  <text x="54" y="122" fill="#f8fafc" font-size="25" font-weight="700">Activity snapshot</text>
-  <text x="54" y="151" class="label">All-time progress + 2026 contribution mix</text>
-  <line x1="490" y1="70" x2="490" y2="370" stroke="#27334a"/>
+  <rect x="1" y="1" width="998" height="262" rx="15" fill="#080f1d" stroke="#2563eb" stroke-width="2"/>
+  <text x="32" y="35" class="eyebrow">GITHUB ACTIVITY · YOUR_USERNAME</text>
+  <text x="32" y="58" class="label">all-time progress / 2026 contribution mix</text>
+  <line x1="480" y1="24" x2="480" y2="238" stroke="#1e3a5f"/>
 
-  <text x="54" y="219" class="big">0</text>
-  <text x="54" y="246" class="label">total contributions</text>
-  <text x="283" y="219" class="big">0</text>
-  <text x="283" y="246" class="label">day longest streak</text>
+  <rect x="32" y="80" width="198" height="100" rx="10" fill="#0b1628" stroke="#1e3a5f"/>
+  <text x="50" y="124" class="big">0</text>
+  <text x="50" y="150" class="label">total contributions</text>
+  <path d="M50 164H212" stroke="#1e3a5f"/>
+  <text x="50" y="174" class="eyebrow" font-size="10">ALL TIME</text>
 
-  <rect x="54" y="286" width="382" height="70" rx="14" fill="#111a2c" stroke="#27334a"/>
-  <circle cx="82" cy="321" r="7" fill="#67e8f9" filter="url(#glow)"/>
-  <text x="103" y="316" fill="#dbeafe" font-size="15" font-weight="600">Contribution radar</text>
-  <text x="103" y="339" class="label">Log scale up to 10 · updated automatically</text>
+  <rect x="246" y="80" width="198" height="100" rx="10" fill="#0b1628" stroke="#1e3a5f"/>
+  <text x="264" y="124" class="big">0</text>
+  <text x="264" y="150" class="label">day longest streak</text>
+  <path d="M264 164H426" stroke="#1e3a5f"/>
+  <text x="264" y="174" class="eyebrow" font-size="10">BEST RUN</text>
 
-  <g class="grid"><polygon points="760.0,174.3 792.1,197.6 779.8,235.3 740.2,235.3 727.9,197.6" /><polygon points="760.0,140.5 824.2,187.1 799.7,262.6 720.3,262.6 695.8,187.1" /><polygon points="760.0,106.8 856.3,176.7 819.5,289.9 700.5,289.9 663.7,176.7" /><polygon points="760.0,73.0 888.4,166.3 839.4,317.2 680.6,317.2 631.6,166.3" /><line x1="760" y1="208" x2="760.0" y2="73.0" /><line x1="760" y1="208" x2="888.4" y2="166.3" /><line x1="760" y1="208" x2="839.4" y2="317.2" /><line x1="760" y1="208" x2="680.6" y2="317.2" /><line x1="760" y1="208" x2="631.6" y2="166.3" /></g>
-  <polygon class="shape" points="760.0,197.2 770.3,204.7 766.3,216.7 753.7,216.7 749.7,204.7" fill="url(#accent)" fill-opacity=".38" stroke="#67e8f9" stroke-width="2.5" filter="url(#glow)"/>
-  <text x="760.0" y="33.0" text-anchor="middle" class="radar-label">Commits<tspan x="760.0" dy="18" class="radar-value">0</tspan></text><text x="924.5" y="159.5" text-anchor="start" class="radar-label">Issues<tspan x="924.5" dy="18" class="radar-value">0</tspan></text><text x="861.7" y="353.0" text-anchor="start" class="radar-label">Pull requests<tspan x="861.7" dy="18" class="radar-value">0</tspan></text><text x="658.3" y="353.0" text-anchor="end" class="radar-label">Reviews<tspan x="658.3" dy="18" class="radar-value">0</tspan></text><text x="595.5" y="159.5" text-anchor="end" class="radar-label">Repositories<tspan x="595.5" dy="18" class="radar-value">0</tspan></text>
-  <rect x="545" y="178" width="430" height="62" rx="14" fill="#0a0f1f" fill-opacity=".92" stroke="#8b5cf6"/><text x="760" y="205" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="650">Live data will appear after the first workflow run</text><text x="760" y="226" text-anchor="middle" class="label">Actions → Update profile activity → Run workflow</text>
-  <text x="54" y="404" class="label">Data source: GitHub GraphQL API</text>
-  <text x="946" y="404" text-anchor="end" class="label">generated 2026-09-03</text>
+  <circle cx="39" cy="215" r="4" fill="#3b82f6"/>
+  <text x="52" y="219" class="label">radar uses a log scale up to 10</text>
+
+  <g class="grid"><polygon points="750.0,108.5 768.5,122.0 761.5,143.8 738.5,143.8 731.5,122.0" /><polygon points="750.0,89.0 787.1,115.9 772.9,159.6 727.1,159.6 712.9,115.9" /><polygon points="750.0,69.5 805.6,109.9 784.4,175.3 715.6,175.3 694.4,109.9" /><polygon points="750.0,50.0 824.2,103.9 795.8,191.1 704.2,191.1 675.8,103.9" /><line x1="750" y1="128" x2="750.0" y2="50.0" /><line x1="750" y1="128" x2="824.2" y2="103.9" /><line x1="750" y1="128" x2="795.8" y2="191.1" /><line x1="750" y1="128" x2="704.2" y2="191.1" /><line x1="750" y1="128" x2="675.8" y2="103.9" /></g>
+  <polygon class="shape" points="750.0,121.8 755.9,126.1 753.7,133.0 746.3,133.0 744.1,126.1" fill="#2563eb" fill-opacity=".28" stroke="#60a5fa" stroke-width="2"/>
+  <text x="750.0" y="22.0" text-anchor="middle" class="radar-label">Commits<tspan x="750.0" dy="14" class="radar-value">0</tspan></text><text x="850.8" y="98.2" text-anchor="start" class="radar-label">Issues<tspan x="850.8" dy="14" class="radar-value">0</tspan></text><text x="812.3" y="216.8" text-anchor="start" class="radar-label">Pull requests<tspan x="812.3" dy="14" class="radar-value">0</tspan></text><text x="687.7" y="216.8" text-anchor="end" class="radar-label">Reviews<tspan x="687.7" dy="14" class="radar-value">0</tspan></text><text x="649.2" y="98.2" text-anchor="end" class="radar-label">Repositories<tspan x="649.2" dy="14" class="radar-value">0</tspan></text>
+  <rect x="548" y="99" width="404" height="54" rx="9" fill="#080f1d" fill-opacity=".96" stroke="#2563eb"/><text x="750" y="122" text-anchor="middle" fill="#dbeafe" font-size="13" font-weight="700">Waiting for the first workflow run</text><text x="750" y="141" text-anchor="middle" class="label">Actions → Update profile activity</text>
+  <text x="968" y="246" text-anchor="end" class="label">GitHub GraphQL · 2026-09-03</text>
 </svg>
