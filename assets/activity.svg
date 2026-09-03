@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="264" viewBox="0 0 1000 264" role="img" aria-labelledby="title desc">
-  <title id="title">GitHub activity for YOUR_USERNAME</title>
-  <desc id="desc">0 total contributions, 0 day longest streak, and a radar chart of contribution types.</desc>
+  <title id="title">GitHub activity for IlyaGridyushko</title>
+  <desc id="desc">698 total contributions, 22 day longest streak, and a radar chart of contribution types.</desc>
   <defs>
     <style>
       text { font-family:"Ubuntu Mono","Cascadia Code","JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
@@ -15,28 +15,28 @@
     </style>
   </defs>
   <rect x="1" y="1" width="998" height="262" rx="15" fill="#080f1d" stroke="#2563eb" stroke-width="2"/>
-  <text x="32" y="35" class="eyebrow">GITHUB ACTIVITY · YOUR_USERNAME</text>
+  <text x="32" y="35" class="eyebrow">GITHUB ACTIVITY · IlyaGridyushko</text>
   <text x="32" y="58" class="label">all-time progress / all-time contribution mix</text>
   <line x1="480" y1="24" x2="480" y2="238" stroke="#1e3a5f"/>
 
   <rect x="32" y="80" width="198" height="100" rx="10" fill="#0b1628" stroke="#1e3a5f"/>
-  <text x="50" y="124" class="big">0</text>
+  <text x="50" y="124" class="big">698</text>
   <text x="50" y="150" class="label">total contributions</text>
   <path d="M50 164H212" stroke="#1e3a5f"/>
   <text x="50" y="174" class="eyebrow" font-size="10">ALL TIME</text>
 
   <rect x="246" y="80" width="198" height="100" rx="10" fill="#0b1628" stroke="#1e3a5f"/>
-  <text x="264" y="124" class="big">0</text>
+  <text x="264" y="124" class="big">22</text>
   <text x="264" y="150" class="label">day longest streak</text>
   <path d="M264 164H426" stroke="#1e3a5f"/>
   <text x="264" y="174" class="eyebrow" font-size="10">BEST RUN</text>
 
   <circle cx="39" cy="215" r="4" fill="#3b82f6"/>
-  <text x="52" y="219" class="label">radar uses a log scale up to 10</text>
+  <text x="52" y="219" class="label">radar uses a log scale up to 100</text>
 
   <g class="grid"><polygon points="750.0,108.5 768.5,122.0 761.5,143.8 738.5,143.8 731.5,122.0" /><polygon points="750.0,89.0 787.1,115.9 772.9,159.6 727.1,159.6 712.9,115.9" /><polygon points="750.0,69.5 805.6,109.9 784.4,175.3 715.6,175.3 694.4,109.9" /><polygon points="750.0,50.0 824.2,103.9 795.8,191.1 704.2,191.1 675.8,103.9" /><line x1="750" y1="128" x2="750.0" y2="50.0" /><line x1="750" y1="128" x2="824.2" y2="103.9" /><line x1="750" y1="128" x2="795.8" y2="191.1" /><line x1="750" y1="128" x2="704.2" y2="191.1" /><line x1="750" y1="128" x2="675.8" y2="103.9" /></g>
-  <polygon class="shape" points="750.0,121.8 755.9,126.1 753.7,133.0 746.3,133.0 744.1,126.1" fill="#2563eb" fill-opacity=".28" stroke="#60a5fa" stroke-width="2"/>
-  <text x="750.0" y="22.0" text-anchor="middle" class="radar-label">Commits<tspan x="750.0" dy="14" class="radar-value">0</tspan></text><text x="850.8" y="98.2" text-anchor="start" class="radar-label">Issues<tspan x="850.8" dy="14" class="radar-value">0</tspan></text><text x="812.3" y="216.8" text-anchor="start" class="radar-label">Pull requests<tspan x="812.3" dy="14" class="radar-value">0</tspan></text><text x="687.7" y="216.8" text-anchor="end" class="radar-label">Reviews<tspan x="687.7" dy="14" class="radar-value">0</tspan></text><text x="649.2" y="98.2" text-anchor="end" class="radar-label">Repositories<tspan x="649.2" dy="14" class="radar-value">0</tspan></text>
-  <rect x="548" y="99" width="404" height="54" rx="9" fill="#080f1d" fill-opacity=".96" stroke="#2563eb"/><text x="750" y="122" text-anchor="middle" fill="#dbeafe" font-size="13" font-weight="700">Waiting for the first workflow run</text><text x="750" y="141" text-anchor="middle" class="label">Actions → Update profile activity</text>
+  <polygon class="shape" points="750.0,71.1 755.9,126.1 753.7,133.0 746.3,133.0 716.6,117.1" fill="#2563eb" fill-opacity=".28" stroke="#60a5fa" stroke-width="2"/>
+  <text x="750.0" y="22.0" text-anchor="middle" class="radar-label">Commits<tspan x="750.0" dy="14" class="radar-value">28</tspan></text><text x="850.8" y="98.2" text-anchor="start" class="radar-label">Issues<tspan x="850.8" dy="14" class="radar-value">0</tspan></text><text x="812.3" y="216.8" text-anchor="start" class="radar-label">Pull requests<tspan x="812.3" dy="14" class="radar-value">0</tspan></text><text x="687.7" y="216.8" text-anchor="end" class="radar-label">Reviews<tspan x="687.7" dy="14" class="radar-value">0</tspan></text><text x="649.2" y="98.2" text-anchor="end" class="radar-label">Repositories<tspan x="649.2" dy="14" class="radar-value">7</tspan></text>
+  
   <text x="968" y="246" text-anchor="end" class="label">GitHub GraphQL · 2026-09-03</text>
 </svg>
