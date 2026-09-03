@@ -3,19 +3,19 @@
   <desc id="desc">JavaScript is typed with a moving caret, the return value flickers into view, then the code dissolves into binary.</desc>
   <defs>
     <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#080f1d"/><stop offset="1" stop-color="#0b1628"/></linearGradient>
-    <clipPath id="l1"><rect x="0" y="0" width="0" height="22"><animate attributeName="width" values="0;0;348;348" keyTimes="0;.01;.055;1" dur="8s" repeatCount="indefinite"/></rect></clipPath>
-    <clipPath id="l2"><rect x="0" y="24" width="0" height="22"><animate attributeName="width" values="0;0;174;174" keyTimes="0;.055;.095;1" dur="8s" repeatCount="indefinite"/></rect></clipPath>
-    <clipPath id="l3"><rect x="0" y="48" width="0" height="22"><animate attributeName="width" values="0;0;388;388" keyTimes="0;.095;.145;1" dur="8s" repeatCount="indefinite"/></rect></clipPath>
-    <clipPath id="l4"><rect x="0" y="72" width="0" height="22"><animate attributeName="width" values="0;0;520;520" keyTimes="0;.145;.21;1" dur="8s" repeatCount="indefinite"/></rect></clipPath>
-    <clipPath id="l5"><rect x="0" y="96" width="0" height="22"><animate attributeName="width" values="0;0;58;58" keyTimes="0;.21;.225;1" dur="8s" repeatCount="indefinite"/></rect></clipPath>
-    <clipPath id="l6"><rect x="0" y="120" width="0" height="22"><animate attributeName="width" values="0;0;486;486" keyTimes="0;.225;.28;1" dur="8s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="l1"><rect x="0" y="0" width="0" height="22"><animate attributeName="width" values="0;0;348;348" keyTimes="0;.008;.044;1" dur="10s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="l2"><rect x="0" y="24" width="0" height="22"><animate attributeName="width" values="0;0;174;174" keyTimes="0;.044;.076;1" dur="10s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="l3"><rect x="0" y="48" width="0" height="22"><animate attributeName="width" values="0;0;388;388" keyTimes="0;.076;.116;1" dur="10s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="l4"><rect x="0" y="72" width="0" height="22"><animate attributeName="width" values="0;0;520;520" keyTimes="0;.116;.168;1" dur="10s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="l5"><rect x="0" y="96" width="0" height="22"><animate attributeName="width" values="0;0;58;58" keyTimes="0;.168;.18;1" dur="10s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="l6"><rect x="0" y="120" width="0" height="22"><animate attributeName="width" values="0;0;486;486" keyTimes="0;.18;.224;1" dur="10s" repeatCount="indefinite"/></rect></clipPath>
     <style>
       .mono { font-family:"Ubuntu Mono","Cascadia Code","JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
       .code { font-size:16px; font-weight:500; }
-      .caret { fill:#60a5fa; animation:cursorBlink .9s steps(1,end) infinite; }
-      .bit { font-size:13px; font-weight:700; fill:#60a5fa; }
+      .caret { fill:#60a5fa; animation:cursorBlink .72s steps(1,end) infinite; }
+      .bit { font-size:12px; font-weight:700; fill:#60a5fa; }
       .bit-dim { fill:#29476d; }
-      @keyframes cursorBlink { 0%,79%,93%,100% { opacity:1 } 80%,92% { opacity:0 } }
+      @keyframes cursorBlink { 0%,68%,82%,100% { opacity:1 } 69%,81% { opacity:0 } }
     </style>
   </defs>
 
@@ -28,7 +28,7 @@
   <text x="958" y="28" text-anchor="end" class="mono" font-size="12" fill="#4f6b91">UTF-8 · LF</text>
 
   <g>
-    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.91;.975;1" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.78;.91;1" dur="10s" repeatCount="indefinite"/>
     <g transform="translate(54 63)" class="mono code">
       <text y="16" clip-path="url(#l1)"><tspan fill="#60a5fa">const</tspan><tspan fill="#d8e3f0"> greet = ({ name, role }) </tspan><tspan fill="#93c5fd">=&gt;</tspan></text>
       <text y="40" clip-path="url(#l2)"><tspan fill="#d8e3f0">  Object.</tspan><tspan fill="#7dd3fc">freeze</tspan><tspan fill="#d8e3f0">({</tspan></text>
@@ -37,35 +37,47 @@
       <text y="112" clip-path="url(#l5)" fill="#d8e3f0">  });</text>
       <text y="136" clip-path="url(#l6)"><tspan fill="#7dd3fc">greet</tspan><tspan fill="#d8e3f0">({ name: </tspan><tspan fill="#bfdbfe">"World"</tspan><tspan fill="#d8e3f0">, role: </tspan><tspan fill="#bfdbfe">"frontend"</tspan><tspan fill="#d8e3f0"> });</tspan></text>
 
-      <g><animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.01;.055;.056;1" dur="8s" repeatCount="indefinite"/><rect class="caret" y="0" width="2" height="19"><animate attributeName="x" values="0;0;348;348" keyTimes="0;.01;.055;1" dur="8s" repeatCount="indefinite"/></rect></g>
-      <g><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.054;.055;.095;.096;1" dur="8s" repeatCount="indefinite"/><rect class="caret" y="24" width="2" height="19"><animate attributeName="x" values="0;0;174;174" keyTimes="0;.055;.095;1" dur="8s" repeatCount="indefinite"/></rect></g>
-      <g><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.094;.095;.145;.146;1" dur="8s" repeatCount="indefinite"/><rect class="caret" y="48" width="2" height="19"><animate attributeName="x" values="0;0;388;388" keyTimes="0;.095;.145;1" dur="8s" repeatCount="indefinite"/></rect></g>
-      <g><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.144;.145;.21;.211;1" dur="8s" repeatCount="indefinite"/><rect class="caret" y="72" width="2" height="19"><animate attributeName="x" values="0;0;520;520" keyTimes="0;.145;.21;1" dur="8s" repeatCount="indefinite"/></rect></g>
-      <g><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.209;.21;.225;.226;1" dur="8s" repeatCount="indefinite"/><rect class="caret" y="96" width="2" height="19"><animate attributeName="x" values="0;0;58;58" keyTimes="0;.21;.225;1" dur="8s" repeatCount="indefinite"/></rect></g>
-      <g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.224;.225;.91;1" dur="8s" repeatCount="indefinite"/><rect class="caret" y="120" width="2" height="19"><animate attributeName="x" values="0;0;486;486" keyTimes="0;.225;.28;1" dur="8s" repeatCount="indefinite"/></rect></g>
+      <g><animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.008;.044;.045;1" dur="10s" repeatCount="indefinite"/><rect class="caret" y="0" width="2" height="19"><animate attributeName="x" values="0;0;348;348" keyTimes="0;.008;.044;1" dur="10s" repeatCount="indefinite"/></rect></g>
+      <g><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.043;.044;.076;.077;1" dur="10s" repeatCount="indefinite"/><rect class="caret" y="24" width="2" height="19"><animate attributeName="x" values="0;0;174;174" keyTimes="0;.044;.076;1" dur="10s" repeatCount="indefinite"/></rect></g>
+      <g><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.075;.076;.116;.117;1" dur="10s" repeatCount="indefinite"/><rect class="caret" y="48" width="2" height="19"><animate attributeName="x" values="0;0;388;388" keyTimes="0;.076;.116;1" dur="10s" repeatCount="indefinite"/></rect></g>
+      <g><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.115;.116;.168;.169;1" dur="10s" repeatCount="indefinite"/><rect class="caret" y="72" width="2" height="19"><animate attributeName="x" values="0;0;520;520" keyTimes="0;.116;.168;1" dur="10s" repeatCount="indefinite"/></rect></g>
+      <g><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.167;.168;.18;.181;1" dur="10s" repeatCount="indefinite"/><rect class="caret" y="96" width="2" height="19"><animate attributeName="x" values="0;0;58;58" keyTimes="0;.168;.18;1" dur="10s" repeatCount="indefinite"/></rect></g>
+      <g><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.179;.18;.78;1" dur="10s" repeatCount="indefinite"/><rect class="caret" y="120" width="2" height="19"><animate attributeName="x" values="0;0;486;486" keyTimes="0;.18;.224;1" dur="10s" repeatCount="indefinite"/></rect></g>
     </g>
 
     <g class="mono" transform="translate(700 78)">
       <path d="M0 0V104" stroke="#1e3a5f"/>
-      <text x="28" y="3" font-size="12" fill="#4f6b91">RETURN VALUE</text>
+      <text x="28" y="3" font-size="12" fill="#4f6b91" letter-spacing="1">RETURN VALUE</text>
       <g opacity="0">
-        <animate attributeName="opacity" values="0;0;1;0;1;0;1;0;1;0;1;1;0;0" keyTimes="0;.28;.30;.32;.34;.355;.368;.378;.386;.393;.40;.91;.975;1" dur="8s" repeatCount="indefinite"/>
-        <text x="28" y="37" font-size="15" fill="#d8e3f0">{ message:</text>
-        <text x="28" y="63" font-size="18" font-weight="700" fill="#60a5fa">"Hello there, World."</text>
-        <text x="28" y="89" font-size="15" fill="#d8e3f0">}</text>
+        <animate attributeName="opacity" calcMode="discrete" values="0;1;0;1;0;1;0;1;0;1;0;1;1;0;0" keyTimes="0;.07;.084;.096;.112;.122;.139;.147;.164;.17;.192;.198;.224;.91;1" dur="10s" repeatCount="indefinite"/>
+        <path d="M28 24V82" stroke="#2563eb" stroke-width="2"/>
+        <text x="42" y="38" font-size="13" fill="#7890b0">message</text>
+        <text x="42" y="68" font-size="21" font-weight="700" fill="#60a5fa">Hello there, World.</text>
+        <path d="M42 78H248" stroke="#2563eb"/>
       </g>
     </g>
   </g>
 
   <g class="mono" opacity="0">
-    <animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;.91;.93;.975;1" dur="8s" repeatCount="indefinite"/>
-    <g><text class="bit" x="82" y="83">0 1 1 0</text><animateTransform attributeName="transform" type="translate" values="0 0;0 0;-34 -24;-48 -38" keyTimes="0;.91;.975;1" dur="8s" repeatCount="indefinite"/></g>
-    <g><text class="bit bit-dim" x="188" y="107">1 0 0 1 0</text><animateTransform attributeName="transform" type="translate" values="0 0;0 0;12 -34;18 -48" keyTimes="0;.91;.975;1" dur="8s" repeatCount="indefinite"/></g>
-    <g><text class="bit" x="314" y="131">0 1 0</text><animateTransform attributeName="transform" type="translate" values="0 0;0 0;-18 35;-26 48" keyTimes="0;.91;.975;1" dur="8s" repeatCount="indefinite"/></g>
-    <g><text class="bit bit-dim" x="446" y="155">1 1 0 1</text><animateTransform attributeName="transform" type="translate" values="0 0;0 0;30 28;44 42" keyTimes="0;.91;.975;1" dur="8s" repeatCount="indefinite"/></g>
-    <g><text class="bit" x="570" y="179">0 0 1</text><animateTransform attributeName="transform" type="translate" values="0 0;0 0;-8 31;-14 46" keyTimes="0;.91;.975;1" dur="8s" repeatCount="indefinite"/></g>
-    <g><text class="bit bit-dim" x="746" y="111">1 0 1 1</text><animateTransform attributeName="transform" type="translate" values="0 0;0 0;-26 -32;-40 -46" keyTimes="0;.91;.975;1" dur="8s" repeatCount="indefinite"/></g>
-    <g><text class="bit" x="842" y="137">0 1 0</text><animateTransform attributeName="transform" type="translate" values="0 0;0 0;34 -18;52 -28" keyTimes="0;.91;.975;1" dur="8s" repeatCount="indefinite"/></g>
-    <g><text class="bit bit-dim" x="779" y="167">1 1 0 0 1</text><animateTransform attributeName="transform" type="translate" values="0 0;0 0;10 32;16 48" keyTimes="0;.91;.975;1" dur="8s" repeatCount="indefinite"/></g>
+    <animate attributeName="opacity" values="0;0;.95;.72;0;0" keyTimes="0;.76;.79;.85;.91;1" dur="10s" repeatCount="indefinite"/>
+    <g><text class="bit" x="68" y="58"><tspan x="68">0</tspan><tspan x="68" dy="14">1</tspan><tspan x="68" dy="14">0</tspan><tspan x="68" dy="14">1</tspan><tspan x="68" dy="14">1</tspan><tspan x="68" dy="14">0</tspan><tspan x="68" dy="14">1</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -18;0 -18;0 132;0 166" keyTimes="0;.76;.91;1" dur="10s" repeatCount="indefinite"/></g>
+    <g><text class="bit bit-dim" x="108" y="90"><tspan x="108">1</tspan><tspan x="108" dy="14">0</tspan><tspan x="108" dy="14">0</tspan><tspan x="108" dy="14">1</tspan><tspan x="108" dy="14">0</tspan><tspan x="108" dy="14">1</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -26;0 -26;0 116;0 154" keyTimes="0;.76;.91;1" dur="10s" repeatCount="indefinite"/></g>
+    <g><text class="bit" x="150" y="67"><tspan x="150">0</tspan><tspan x="150" dy="14">1</tspan><tspan x="150" dy="14">1</tspan><tspan x="150" dy="14">0</tspan><tspan x="150" dy="14">0</tspan><tspan x="150" dy="14">1</tspan><tspan x="150" dy="14">0</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -14;0 -14;0 148;0 182" keyTimes="0;.76;.91;1" dur="10s" repeatCount="indefinite"/></g>
+    <g><text class="bit bit-dim" x="194" y="116"><tspan x="194">1</tspan><tspan x="194" dy="14">1</tspan><tspan x="194" dy="14">0</tspan><tspan x="194" dy="14">1</tspan><tspan x="194" dy="14">0</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -34;0 -34;0 104;0 142" keyTimes="0;.76;.91;1" dur="10s" repeatCount="indefinite"/></g>
+    <g><text class="bit" x="238" y="74"><tspan x="238">0</tspan><tspan x="238" dy="14">0</tspan><tspan x="238" dy="14">1</tspan><tspan x="238" dy="14">0</tspan><tspan x="238" dy="14">1</tspan><tspan x="238" dy="14">1</tspan><tspan x="238" dy="14">0</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -20;0 -20;0 154;0 188" keyTimes="0;.76;.91;1" dur="10s" repeatCount="indefinite"/></g>
+    <g><text class="bit bit-dim" x="282" y="102"><tspan x="282">1</tspan><tspan x="282" dy="14">0</tspan><tspan x="282" dy="14">1</tspan><tspan x="282" dy="14">0</tspan><tspan x="282" dy="14">0</tspan><tspan x="282" dy="14">1</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -30;0 -30;0 124;0 160" keyTimes="0;.76;.91;1" dur="10s" repeatCount="indefinite"/></g>
+    <g><text class="bit" x="326" y="62"><tspan x="326">0</tspan><tspan x="326" dy="14">1</tspan><tspan x="326" dy="14">0</tspan><tspan x="326" dy="14">0</tspan><tspan x="326" dy="14">1</tspan><tspan x="326" dy="14">1</tspan><tspan x="326" dy="14">0</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -12;0 -12;0 144;0 180" keyTimes="0;.76;.91;1" dur="10s" repeatCount="indefinite"/></g>
+    <g><text class="bit bit-dim" x="370" y="126"><tspan x="370">1</tspan><tspan x="370" dy="14">0</tspan><tspan x="370" dy="14">1</tspan><tspan x="370" dy="14">1</tspan><tspan x="370" dy="14">0</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -38;0 -38;0 108;0 148" keyTimes="0;.76;.91;1" dur="10s" repeatCount="indefinite"/></g>
+    <g><text class="bit" x="414" y="79"><tspan x="414">0</tspan><tspan x="414" dy="14">1</tspan><tspan x="414" dy="14">1</tspan><tspan x="414" dy="14">0</tspan><tspan x="414" dy="14">1</tspan><tspan x="414" dy="14">0</tspan><tspan x="414" dy="14">0</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -22;0 -22;0 138;0 174" keyTimes="0;.76;.91;1" dur="10s" repeatCount="indefinite"/></g>
+    <g><text class="bit bit-dim" x="458" y="96"><tspan x="458">1</tspan><tspan x="458" dy="14">0</tspan><tspan x="458" dy="14">0</tspan><tspan x="458" dy="14">1</tspan><tspan x="458" dy="14">1</tspan><tspan x="458" dy="14">0</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -28;0 -28;0 126;0 164" keyTimes="0;.76;.91;1" dur="10s" repeatCount="indefinite"/></g>
+    <g><text class="bit" x="508" y="69"><tspan x="508">0</tspan><tspan x="508" dy="14">1</tspan><tspan x="508" dy="14">0</tspan><tspan x="508" dy="14">1</tspan><tspan x="508" dy="14">0</tspan><tspan x="508" dy="14">1</tspan><tspan x="508" dy="14">1</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -16;0 -16;0 150;0 186" keyTimes="0;.76;.91;1" dur="10s" repeatCount="indefinite"/></g>
+    <g><text class="bit bit-dim" x="558" y="119"><tspan x="558">1</tspan><tspan x="558" dy="14">1</tspan><tspan x="558" dy="14">0</tspan><tspan x="558" dy="14">0</tspan><tspan x="558" dy="14">1</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -36;0 -36;0 112;0 150" keyTimes="0;.76;.91;1" dur="10s" repeatCount="indefinite"/></g>
+    <g><text class="bit" x="610" y="76"><tspan x="610">0</tspan><tspan x="610" dy="14">0</tspan><tspan x="610" dy="14">1</tspan><tspan x="610" dy="14">1</tspan><tspan x="610" dy="14">0</tspan><tspan x="610" dy="14">1</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -20;0 -20;0 140;0 176" keyTimes="0;.76;.91;1" dur="10s" repeatCount="indefinite"/></g>
+    <g><text class="bit bit-dim" x="660" y="107"><tspan x="660">1</tspan><tspan x="660" dy="14">0</tspan><tspan x="660" dy="14">1</tspan><tspan x="660" dy="14">0</tspan><tspan x="660" dy="14">1</tspan><tspan x="660" dy="14">0</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -32;0 -32;0 120;0 158" keyTimes="0;.76;.91;1" dur="10s" repeatCount="indefinite"/></g>
+    <g><text class="bit" x="714" y="63"><tspan x="714">0</tspan><tspan x="714" dy="14">1</tspan><tspan x="714" dy="14">1</tspan><tspan x="714" dy="14">0</tspan><tspan x="714" dy="14">0</tspan><tspan x="714" dy="14">1</tspan><tspan x="714" dy="14">0</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -14;0 -14;0 152;0 188" keyTimes="0;.76;.91;1" dur="10s" repeatCount="indefinite"/></g>
+    <g><text class="bit bit-dim" x="768" y="114"><tspan x="768">1</tspan><tspan x="768" dy="14">0</tspan><tspan x="768" dy="14">1</tspan><tspan x="768" dy="14">1</tspan><tspan x="768" dy="14">0</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -35;0 -35;0 110;0 148" keyTimes="0;.76;.91;1" dur="10s" repeatCount="indefinite"/></g>
+    <g><text class="bit" x="822" y="72"><tspan x="822">0</tspan><tspan x="822" dy="14">1</tspan><tspan x="822" dy="14">0</tspan><tspan x="822" dy="14">1</tspan><tspan x="822" dy="14">1</tspan><tspan x="822" dy="14">0</tspan><tspan x="822" dy="14">1</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -18;0 -18;0 146;0 182" keyTimes="0;.76;.91;1" dur="10s" repeatCount="indefinite"/></g>
+    <g><text class="bit bit-dim" x="876" y="99"><tspan x="876">1</tspan><tspan x="876" dy="14">1</tspan><tspan x="876" dy="14">0</tspan><tspan x="876" dy="14">0</tspan><tspan x="876" dy="14">1</tspan><tspan x="876" dy="14">0</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -29;0 -29;0 124;0 162" keyTimes="0;.76;.91;1" dur="10s" repeatCount="indefinite"/></g>
+    <g><text class="bit" x="930" y="61"><tspan x="930">0</tspan><tspan x="930" dy="14">1</tspan><tspan x="930" dy="14">0</tspan><tspan x="930" dy="14">0</tspan><tspan x="930" dy="14">1</tspan><tspan x="930" dy="14">1</tspan><tspan x="930" dy="14">0</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -12;0 -12;0 150;0 186" keyTimes="0;.76;.91;1" dur="10s" repeatCount="indefinite"/></g>
   </g>
 </svg>
